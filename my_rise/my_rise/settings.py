@@ -53,6 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'my_rise.urls'
 TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" +'\\' + "templates") 
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
 TEMPLATES = [
     {
@@ -119,6 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+#MEDIA_URL = '/MEDIA/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
