@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar">
+    {% load static %}
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>لحن قلم</title>
 <style>
 body {
-    background: linear-gradient(to bottom right, #808080, #800080); /* خلفية بتدرجات من الرمادي إلى البنفسجي */
-    font-family: Arial, sans-serif;
+
+
+    background: linear-gradient(to bottom right, #eaeaea, #c0d6df); /* خلفية بتدرجات من الرمادي إلى البنفسجي */
+    font-family: Droid Arabic Naskh, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -19,7 +23,7 @@ body {
 }
 
 .navbar {
-    background-color: #333; /* لون شريط البار */
+    background-color: #4f6d7a; /* لون شريط البار */
     overflow: hidden;
 }
 
@@ -28,20 +32,21 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 30px 20px;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    background-color: #ddd; /* لون الخلفية عندما يتم تحويل الماوس عليه */
-    color: black;
+    background-color: #c0d6df; /* لون الخلفية عندما يتم تحويل الماوس عليه */
+    /*color: black;*/
 }
 
 .content {
-    background-color: #f0f0f0; /* خلفية المحتوى باللون الرمادي */
+    background-color: #eaeaea; /* خلفية المحتوى   */
     padding: 20px;
     border-radius: 5px;
-    font-size: 18px; /* حجم الخط أكبر قليلاً */
+    font-size: 18px; /* حجم الخط   */
+    
 }
 
 .dropdown {
@@ -55,8 +60,7 @@ body {
     outline: none;
     color: white;
     padding: 14px 20px;
-    background-color: inherit;
-    font-family: inherit;
+    background-color: dd6e42;
     margin: 0;
 }
 
@@ -78,34 +82,46 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #dd6e42;
     color: black;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+h1 {
+    text-align: center; /* تحديد محاذاة العنوان إلى اليمين */
+    font-size: 60px; /* تكبير حجم العنوان */
+}
+p {
+    text-align: center; /* تحديد محاذاة العنوان إلى اليمين */
+    font-size: 20px; /* تكبير حجم العنوان */
+    line-height: 1.6;
+}
 </style>
 </head>
 <body>
-
-<div class="navbar">
-    <div class="dropdown">
-  <a button href="#">الاقسام</a>
-    <div class="dropdown-content">
-      <a href="#">شعر</a>
-      <a href="#">نثر</a>
-      <a href="#">خواطر</a>
+    <div class="navbar">
+        <div class="dropdown">
+            <a span button href="#">الاقسام</ span>
+            </a>
+        <div class="dropdown-content">
+          <a href="#">شعر</a>
+          <a href="#">نثر</a>
+          <a href="#">خواطر</a>
+        </div>
+        </div>
+        <a href="#">الرئيسية</a>
+         <a href="#">من نحن</a>
     </div>
-  </div>
-  <a href="#">الرئيسية</a>
-  <a href="#">من نحن</a>
-</div>
 
 <div class="container">
   <h1>لحن قلم</h1>
   <div class="content">
-    <p>أهلاً بك في موقع لحن قلم، حيث يمكنك الاستمتاع بقراءة المقالات والأخبار والمزيد.</p>
+    <p> أهلاً وسهلاً بكم في عالم الأحرف والمشاعر، حيث تتلاقى الكلمات لتخلق لوحات
+        من الجمال والإبداع. انغمسوا في بحر الخيال والكتابة، ودعوا قلوبكم ترقص على
+        أوتار الكلمات وتنطق بأعذب الأشعار          .</p>
     <!-- يمكنك إضافة المزيد من المحتوى هنا -->
   </div>
 </div>
