@@ -3,10 +3,8 @@
 <html lang="ar">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <title>لحن قلم</title>
     <style>
@@ -25,11 +23,8 @@
 
         .navbar {
             background-color: #b2967d;
-            /* لون شريط البار */
             overflow: hidden;
-            border-radius: 15px; /* زيادة قيمة border-radius لتقليل حدة الحواف */
-            /*border: 2px solid #6d4c3d;  إضافة حدود للمحتوى */
-
+            border-radius: 15px;
         }
 
         .navbar a {
@@ -43,20 +38,16 @@
 
         .navbar a:hover {
             background-color: #eee4e1;
-            border-radius: 15px; /* زيادة قيمة border-radius لتقليل حدة الحواف */
-            /* لون الخلفية عندما يتم تحويل الماوس عليه */
-            color: black; /* تغيير لون النص عند التحويل */
-
+            border-radius: 15px;
+            color: black;
         }
 
         .content {
             background-color: #eaeaea;
-            /* خلفية المحتوى   */
             padding: 15px;
             border-radius: 15px; 
             font-size: 18px;
             border: 2px solid #b2967d; 
-
         }
 
         .dropdown {
@@ -81,9 +72,7 @@
             min-width: 160px;
             z-index: 1;
             border-radius: 30px;
-            border: 2px solid #b2967d; /* إضافة حدود للمحتوى */
-
-
+            border: 2px solid #b2967d;
         }
 
         .dropdown-content a {
@@ -99,27 +88,22 @@
             background-color: #b2967d;
             color: black;
             border-radius: 30px;
-
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
             color: white;
-            margin-top: 55px; /* تنزيل القائمة المنسدلة قليلاً بعد النقر */
+            margin-top: 55px;
         }
 
         h1 {
             text-align: center;
-            /* تحديد محاذاة العنوان إلى اليمين */
             font-size: 60px;
-            /* تكبير حجم العنوان */
         }
 
         p {
             text-align: center;
-            /* تحديد محاذاة العنوان إلى اليمين */
             font-size: 20px;
-            /* تكبير حجم العنوان */
             line-height: 1.6;
         }
 
@@ -130,13 +114,11 @@
             padding: 20px;
         }
 
-        /* تنسيق القسم المربعات */
         .sections {
             display: flex;
             justify-content: space-between;
             margin-top: 25px 25px 25px 25px;
             padding: 40px;
-
         }
 
         .section {
@@ -147,8 +129,7 @@
             padding: 18px;
             border-radius: 18px;
             margin: 5px 5px 5px 5px;
-            border: 2px solid #b2967d; /* إضافة حدود للمحتوى */
-
+            border: 2px solid #b2967d;
         }
 
     </style>
@@ -156,10 +137,8 @@
 
 <body>
 
-
-    <!-- باقي عناصر شريط البار هنا -->
     <div class="navbar">
-        <img src="{% static 'logoo.png' %}" alt="logo" style="float: right; margin-right: 10px; width: 270px; height: 150px;">
+        <img src="media/logoo.png" alt=" " style="float: left; margin-right: 15px; width: 100px; height: 100px;">
         <a href="#home">الصفحة الرئيسية</a>
         <div class="dropdown">
             <a href="#">الاقسام</a>
@@ -171,10 +150,8 @@
         </div>
         <a href="#posts">المنشورات</a>
         <a href="#search">البحث</a>
-        <a href="#about">مــن نحن</a> <!-- تم تغيير الرابط لينقل إلى الفوتر -->
+        <a href="#about">مــن نحن</a> 
     </div>
-
-
 
     <div class="container" id="home">
         <h1>لحن قلم</h1>
@@ -216,9 +193,9 @@
         </div>
     </div>
 
-
     <footer id="footer">
-        <p> مشروع مادة تقنيات الويب  _____________________   عمل الطالبة: شروق الحيسوني _____________________ اشراف الدكتور:  فيصل الحويكم</p>    </footer>
+        <p> مشروع مادة تقنيات الويب  _____________________   عمل الطالبة: شروق الحيسوني _____________________ اشراف الدكتور:  فيصل الحويكم</p>    
+    </footer>
 
 </body>
 

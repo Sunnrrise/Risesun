@@ -6,10 +6,10 @@
     "configurations": [
         {
             "name": "Python Debugger: Django",
-            "type": "debugpy",
+            "type": "python",
             "request": "launch",
-            "python":"C:\Users\acer\OneDrive\Desktop\Django\Scripts\python",
-            "program": "${workspaceFolder}\\manage.py",
+            "python": "C:\\Users\\acer\\OneDrive\\Desktop\\Django\\Scripts\\python",
+            "program": "${workspaceFolder}\\my_rise\\manage.py",
             "args": [
                 "runserver"
             ],
