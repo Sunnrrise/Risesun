@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
+            
             "name": "Python Debugger: Django",
             "type": "python",
             "request": "launch",
@@ -12,7 +13,7 @@
             "program": "${workspaceFolder}\\my_rise\\manage.py",
             "args": [
                 "runserver"
-            ],
+            ], 
             "django": true,
             "autoStartBrowser": false
         }

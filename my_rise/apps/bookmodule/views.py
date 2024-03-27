@@ -4,7 +4,7 @@ def index(request):
  return render(request, 'bookmodule/index.html')
 def cato(request):
     return   render(request, 'bookmodule/cato.html')
-#return redirect('/')
+#return redirect( '/')
 #def numcato(request , bId):
     cato1 = {'id': 11, 'title': 'Reflections'}
     cato2 = {'id': 22, 'title': 'prose' }
