@@ -16,7 +16,12 @@
             margin: 0;
             padding: 0;
         }
-
+              <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">إنشاء</button>
+          </form>
+          
         .container {
             max-width: 800px;
             margin: 0 auto;
