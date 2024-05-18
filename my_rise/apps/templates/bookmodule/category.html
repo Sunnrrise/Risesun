@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category }}</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #b2967d, #eaeaea, #eee4e1, #eaeaea, #E8DAB2, #b2967d, #eaeaea);
+            font-family: Droid Arabic Naskh, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content {
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 18px;
+            border: 2px solid #b2967d;
+        }
+        .section {
+            background-color: #EAEAEA;
+            color: black;
+            text-align: center;
+            padding: 18px;
+            border-radius: 18px;
+            margin: 5px;
+            border: 2px solid #b2967d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ category }}</h1>
+        <div class="content">
+            {% for poem in poems %}
+                <div class="section">
+                    <h2>{{ poem.title }}</h2>
+                    <p>{{ poem.content|linebreaks }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'home' %}">العودة إلى الرئيسية</a>
+    </div>
+</body>
+</html>

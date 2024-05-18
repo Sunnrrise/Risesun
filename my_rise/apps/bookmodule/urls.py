@@ -1,9 +1,8 @@
-from django.urls import path, re_path
-from apps.bookmodule import views
+from django.urls import path
+from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),    
-   # path('cato', views.cato),
-   # path('numcato/<int:bId>', apps.bookmodule.views.numcato),
-    
+    path('prose/', views.prose, name='prose'),
+    path('save_prose/', views.save_prose, name='save_prose'),  # تأكد من وجود هذا المسار
 ]

@@ -1,0 +1,10 @@
+from django.shortcuts import render, redirect
+from .models import ProseModel
+
+def save_prose(request):
+    if request.method == 'POST':
+        prose_text = request.POST.get('prose_input')
+        ProseModel.objects.create(prose_text=prose_text)
+        return redirect('index')
+    else:
+        return redirect('poetry')

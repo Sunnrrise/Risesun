@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لحن قلم - قسم الخواطر</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #b2967d, #eaeaea, #eee4e1, #eaeaea, #E8DAB2, #b2967d, #eaeaea);
+            font-family: Droid Arabic Naskh, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #b2967d;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #eee4e1;
+            border-radius: 15px;
+            color: black;
+        }
+
+        .content {
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 18px;
+            border: 2px solid #b2967d;
+        }
+
+        footer {
+            background-color: #6d4c3d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        /* تنسيق نموذج الإدخال */
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #b2967d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6d4c3d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="{% static 'logoo.png' %}" alt="logo" style="float: right; margin-right: 10px; width: 270px; height: 150px;">
+        <a href="{% url 'index' %}">الصفحـة الرئيسية</a>
+        <div class="dropdown">
+            <a href="#">الاقسام</a>
+            <div class="dropdown-content">
+                <a href="{% url 'poetry' %}">شعر</a>
+                <a href="{% url 'prose' %}">نثر</a>
+                <a href="{% url 'thoughts' %}">خواطر</a>
+            </div>
+        </div>
+        <a href="#posts">المنشـورات</a>
+        <a href="#search">البـحث</a>
+        <a href="#about">مــن نحن</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>قسم الخواطر</h1>
+        <div class="content">
+            <p>مرحبًا بك في قسم الخواطر! يمكنك هنا التعبير عن أفكارك ومشاعرك بشكل جميل ومؤثر.</p>
+            <!-- Form for submitting thoughts -->
+            <form method="POST" style="text-align: right;">
+                {% csrf_token %}
+                <textarea name="thoughts_content" placeholder="اكتب خاطرتك هنا..." style="text-align: right;"></textarea>
+                <button type="submit" style="margin-right: 20px;">إرسال</button>
+            </form>
+            <!-- Display submitted thoughts -->
+            {% if thoughts %}
+                <div>
+                    <h2>آخر خاطرة تم إرسالها:</h2>
+                    <p>{{ thoughts }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>مشروع مادة تقنيات الويب - عمل الطالبة: شروق الحيسوني - اشراف الدكتور: فيصل الحويكم</p>
+    </footer>
+</body>
+
+</html>

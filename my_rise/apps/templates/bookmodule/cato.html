@@ -1,32 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ar">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>لحن قلم</title>
+    <title>القسم</title>
     <style>
         body {
-            background: linear-gradient(to bottom right,#b2967d,#eaeaea,#eee4e1, #eaeaea,#E8DAB2,#b2967d, #eaeaea);
+            background: linear-gradient(to bottom right, #b2967d, #eaeaea, #eee4e1, #eaeaea, #E8DAB2, #b2967d, #eaeaea);
             font-family: Droid Arabic Naskh, sans-serif;
             margin: 0;
             padding: 0;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .navbar {
             background-color: #b2967d;
             overflow: hidden;
             border-radius: 15px;
         }
-
         .navbar a {
             float: right;
             display: block;
@@ -35,168 +30,37 @@
             padding: 25px 20px;
             text-decoration: none;
         }
-
         .navbar a:hover {
             background-color: #eee4e1;
             border-radius: 15px;
             color: black;
         }
-
         .content {
             background-color: #eaeaea;
             padding: 15px;
-            border-radius: 15px; 
+            border-radius: 15px;
             font-size: 18px;
-            border: 2px solid #b2967d; 
-        }
-
-        .dropdown {
-            float: right;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 50px;
-            background-color: b2967d;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #E8DAB2;
-            padding: 5px;
-            min-width: 160px;
-            z-index: 1;
-            border-radius: 30px;
             border: 2px solid #b2967d;
         }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #b2967d;
-            color: black;
-            border-radius: 30px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            color: white;
-            margin-top: 55px;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 60px;
-        }
-
-        p {
-            text-align: center;
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #6d4c3d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .sections {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px 25px 25px 25px;
-            padding: 40px;
-        }
-
-        .section {
-            flex: 1;
-            background-color: #EAEAEA;
-            color: black;
-            text-align: center;
-            padding: 18px;
-            border-radius: 18px;
-            margin: 5px 5px 5px 5px;
-            border: 2px solid #b2967d;
-        }
-
     </style>
 </head>
-
 <body>
-
     <div class="navbar">
-        <img src="media/logoo.png" alt=" " style="float: left; margin-right: 15px; width: 100px; height: 100px;">
-        <a href="#home">الصفحة الرئيسية</a>
-        <div class="dropdown">
-            <a href="#">الاقسام</a>
-            <div class="dropdown-content">
-                <a href="#poetry">شعـر</a>
-                <a href="#prose">نثر</a>
-                <a href="#thoughts">خواطر</a>
-            </div>
-        </div>
-        <a href="#posts">المنشورات</a>
-        <a href="#search">البحث</a>
-        <a href="#about">مــن نحن</a> 
+        <img src="{% static 'logoo.png' %}" alt="logo" style="float: right; margin-right: 10px; width: 270px; height: 150px;">
+        <a href="{% url 'index' %}">الصفحـة الرئيسية</a>
+        <a href="{% url 'cato' %}">القسم</a>
+        <a href="#posts">المنشـورات</a>
+        <a href="#search">البـحث</a>
+        <a href="#about">مــن نحن</a>
     </div>
-
-    <div class="container" id="home">
-        <h1>لحن قلم</h1>
+    <div class="container">
+        <h1>القسم</h1>
         <div class="content">
-            <p> أهلاً وسهلاً بكم في عالم الأحرف والمشاعر حيث تتلاقى الكلمات لتخلق لوحات
-                من الجمال والإبداع انغمسوا في بحر الخيال والكتابة ودعوا قلوبكم ترقص على
-                أوتار الكلمات وتنطق بأعذب الأشعار </p>
-         </div>
-    </div>
-
-    <!-- محتوى الصفحة -->
-
-    <div class="sections">
-        <div class="section">
-            <h2>شعر</h2>
-            <p>محتوى قسم الشعر</p>
-        </div>
-        <div class="section">
-            <h2>نثر</h2>
-            <p>محتوى قسم النثر</p>
-        </div>
-        <div class="section">
-            <h2>خواطر</h2>
-            <p>محتوى قسم الخواطر</p>
+            <p>محتوى القسم</p>
         </div>
     </div>
-    <div class="sections">
-        <div class="section">
-            <h2>شعر</h2>
-            <p>محتوى قسم الشعر</p>
-        </div>
-        <div class="section">
-            <h2>نثر</h2>
-            <p>محتوى قسم النثر</p>
-        </div>
-        <div class="section">
-            <h2>خواطر</h2>
-            <p>محتوى قسم الخواطر</p>
-        </div>
-    </div>
-
     <footer id="footer">
-        <p> مشروع مادة تقنيات الويب  _____________________   عمل الطالبة: شروق الحيسوني _____________________ اشراف الدكتور:  فيصل الحويكم</p>    
+        <p> مشروع مادة تقنيات الويب _____________________ عمل الطالبة: شروق الحيسوني _____________________ اشراف الدكتور: فيصل الحويكم</p>
     </footer>
-
 </body>
-
 </html>
